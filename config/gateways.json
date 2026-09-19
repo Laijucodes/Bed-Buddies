@@ -1,0 +1,13 @@
+{
+  "_readme": [
+    "BED BUDDIES · payment & donation gateway manifest (backend copy).",
+    "The mobile/web client reads src/config/appConfig.ts — keep the two in sync.",
+    "To hot-swap on the server without a rebuild:",
+    "  1. Edit the value below, e.g. \"koFi\": \"https://ko-fi.com/yourname\"",
+    "  2. Deploy:   supabase functions deploy config --no-verify-jwt",
+    "  3. Or set an env var override:  supabase secrets set KO_FI_URL=https://ko-fi.com/yourname",
+    "The edge function serves this file at GET /config/gateways so shipped apps can pick up the new link on next launch."
+  ],
+  "koFi": "Put link here",
+  "donationProducts": ["bedbuddies.tip.1", "bedbuddies.tip.3", "bedbuddies.tip.5", "bedbuddies.tip.10"]
+}
